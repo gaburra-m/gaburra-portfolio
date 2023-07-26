@@ -1,0 +1,19 @@
+---
+import Header from "../components/Header.astro"
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Morales - {title}</title>
+  </head>
+  <body class="bg-backg-200 text-white mx-auto">
+    <Header />
+    <main class="container max-w-3xl mx-auto px-4 my-14">
+      <slot />
+    </main>
+  </body>
+</html>
