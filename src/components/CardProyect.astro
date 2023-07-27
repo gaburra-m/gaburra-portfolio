@@ -1,0 +1,57 @@
+---
+import Links from "../components/Links.astro"
+import { GithubIcon, WebIcon, FlechIcon } from "../components/Icons"
+const { proyecto } = Astro.props
+---
+
+<article
+  class="w-full rounded-md overflow-hidden bg-backg-400 shadow-lg border border-backg-100 hover:border-primary hover:shadow-sm ease-in transition-colors"
+>
+  <figure>
+    <a href={proyecto.url}>
+      <img
+        src={proyecto.frontmatter.image}
+        alt={`Imagen del proyecto de ${proyecto.frontmatter.title}`}
+        loading="lazy"
+      />
+    </a>
+  </figure>
+  <section class="px-2 py-4">
+    <header>
+      <h3 class="text-lg font-semibold text-white">
+        {proyecto.frontmatter.title}
+      </h3>
+    </header>
+    <footer class="flex gap-2 w-full items-center justify-between mt-8">
+      {
+        proyecto.frontmatter.github !== "Sin Github" ? (
+          <Links href={proyecto.frontmatter.github} target>
+            <span slot="icon">
+              <GithubIcon />
+            </span>
+            Github
+          </Links>
+        ) : (
+          <Links href="#" target disabled>
+            <span slot="icon">
+              <GithubIcon />
+            </span>
+            Github
+          </Links>
+        )
+      }
+      <Links href={proyecto.frontmatter.link} target>
+        <span slot="icon">
+          <WebIcon />
+        </span>
+        Proyecto
+      </Links>
+      <Links href={proyecto.url}>
+        <span slot="icon">
+          <FlechIcon />
+        </span>
+        Leer más
+      </Links>
+    </footer>
+  </section>
+</article>

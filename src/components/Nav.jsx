@@ -18,7 +18,7 @@ function Nav() {
   return (
     <nav>
       <button
-        className="flex gap-2 py-2 px-4 border-primary border-2 rounded-md hover:bg-primary transition hover:text-backg-300 z-20 relative md:hidden"
+        className="flex gap-2 py-2 px-4 border-primary border-2 rounded-md hover:bg-primary transition hover:text-backg-400 z-20 relative md:hidden"
         onClick={() => setToggle(!toggle)}
       >
         {toggle ? "Cerrar" : "Menú"}

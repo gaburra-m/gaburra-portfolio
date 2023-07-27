@@ -1,7 +1,16 @@
 ---
 import LayoutInicio from "../layouts/LayoutInicio.astro"
+import Titulos from "../components/Titulos.astro"
+import CardProyect from "../components/CardProyect.astro"
+
+const proyectos = await Astro.glob("../pages/proyectos/*.md")
+const { frontmatter } = Astro.props
 ---
 
 <LayoutInicio title="Proyectos">
-  <h1>Proyectos</h1>
+  <Titulos>Proyectos</Titulos>
+
+  <section class="grid md:grid-cols-2 gap-8">
+    {proyectos.map((proyecto) => <CardProyect proyecto={proyecto} />).reverse()}
+  </section>
 </LayoutInicio>

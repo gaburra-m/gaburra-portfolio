@@ -1,17 +1,17 @@
 ---
 import Nav from "./Nav.jsx"
-import { Logo } from "./Icons.jsx"
+import { Logo } from "./Icons"
 ---
 
-<header class="py-6 bg-backg-300 shadow-md px-4">
+<header class="py-6 bg-backg-400 shadow-md px-4">
   <div
     class="container max-w-3xl mx-auto flex flex-wrap gap-6 justify-between items-center"
   >
-    <a href="" class="flex items-center gap-2 relative z-20">
+    <a
+      href="/"
+      class="flex items-center gap-2 relative z-20 text-white hover:text-primary transition-colors ease-in"
+    >
       <Logo />
-      <!-- <p class="font-semibold text-3xl">
-        <span class="text-primary">G</span>aburra
-      </p> -->
     </a>
 
     <Nav client:only="react" />

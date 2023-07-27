@@ -1,0 +1,86 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import Titulos from "../components/Titulos.astro"
+import PillsTech from "../components/PillsTech.astro"
+import Links from "../components/Links.astro"
+import BackBtn from "../components/BackBtn.jsx"
+import { GithubIcon, WebIcon } from "../components/Icons"
+
+const { frontmatter } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Morales - {frontmatter.title}</title>
+  </head>
+  <body class="bg-backg-200 text-white mx-auto">
+    <Header />
+    <main class="container max-w-3xl mx-auto px-4 md:px-0 my-14">
+      <BackBtn client:only />
+      <section>
+        <p>Proyecto:</p>
+        <Titulos>{frontmatter.title}</Titulos>
+      </section>
+      <figure>
+        <img src={frontmatter.image} alt="" />
+      </figure>
+      <section class="flex flex-col gap-6 py-8 px-4 mb-10">
+        <div class="flex">
+          {
+            frontmatter.status ? (
+              <p class="bg-[#b9ffeb] border-2 border-[#00E18D] py-2 px-4 rounded-full flex items-center gap-2 text-backg-400 font-semibold">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00E18D] opacity-75" />
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00E18D]" />
+                </span>
+                Completado
+              </p>
+            ) : (
+              <p class="bg-[#ffcdd3] border-2 border-primary py-2 px-4 rounded-full flex items-center gap-2 text-backg-400 font-semibold">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-primary" />
+                </span>
+                En proceso
+              </p>
+            )
+          }
+        </div>
+        <div class="flex flex-col gap-2">
+          <p>Tecnologías</p>
+          <div class="flex flex-wrap gap-2">
+            {frontmatter.techs.map((t) => <PillsTech>{t}</PillsTech>)}
+          </div>
+        </div>
+        <div class="flex gap-2">
+          {
+            frontmatter.github !== "Sin Github" ? (
+              <Links href={frontmatter.github} target>
+                <span slot="icon">
+                  <GithubIcon />
+                </span>
+                Github
+              </Links>
+            ) : (
+              <Links href={frontmatter.github} disabled>
+                <span slot="icon">
+                  <GithubIcon />
+                </span>
+                Github
+              </Links>
+            )
+          }
+          <Links href={frontmatter.link} target>
+            <span slot="icon"><WebIcon /></span>Proyecto
+          </Links>
+        </div>
+      </section>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
