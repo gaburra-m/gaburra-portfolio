@@ -20,3 +20,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+src/pages/proyectos/.obsidian/app.json
+src/pages/proyectos/.obsidian/appearance.json
+src/pages/proyectos/.obsidian/core-plugins-migration.json
+src/pages/proyectos/.obsidian/core-plugins.json
+src/pages/proyectos/.obsidian/hotkeys.json
+src/pages/proyectos/.obsidian/workspace.json
