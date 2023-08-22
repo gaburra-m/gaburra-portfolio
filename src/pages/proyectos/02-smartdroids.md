@@ -11,4 +11,5 @@ techs:
   - CSS
   - Figma
 status: true
+index: true
 ---

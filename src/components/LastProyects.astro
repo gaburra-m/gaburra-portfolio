@@ -7,13 +7,19 @@ const { frontmatter } = Astro.props
 ---
 
 <section>
-  <Titulos>Ultimos Proyectos</Titulos>
+  <Titulos>Últimos Proyectos</Titulos>
   <section class="grid md:grid-cols-2 gap-8 mb-6">
-    {
+    <!-- {
       proyectos
         .map((proyecto) => <CardProyect proyecto={proyecto} />)
         .reverse()
         .slice(0, 2)
+    } -->
+    {
+      proyectos
+        .filter((proyecto) => proyecto.frontmatter.index === true)
+        .map((proyecto) => <CardProyect proyecto={proyecto} />)
+        .reverse()
     }
   </section>
   <a

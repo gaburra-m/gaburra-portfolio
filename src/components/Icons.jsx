@@ -65,8 +65,8 @@ export const MenuIcon = () => (
   </svg>
 )
 
-export const GithubIcon = () => (
-  <svg fill="none" viewBox="0 0 19 19" className="w-4 h-4">
+export const GithubIcon = ({ w, h }) => (
+  <svg fill="none" viewBox="0 0 19 19" className={`w-${w} h-${h}`}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -114,16 +114,6 @@ export const FlechIcon = () => (
       d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"
     />
   </svg>
-
-  // <svg fill="none" viewBox="0 0 17 17" className="w-4 h-4">
-  //   <path
-  //     stroke="#fff"
-  //     strokeLinecap="round"
-  //     strokeLinejoin="round"
-  //     strokeWidth="1.5"
-  //     d="M1 8.5h15m0 0L8.917 1M16 8.5 8.917 16"
-  //   />
-  // </svg>
 )
 
 export const TopIcon = () => (
@@ -156,6 +146,25 @@ export const BackIcon = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
       d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+    />
+  </svg>
+)
+
+export const LinkedIcon = ({ w, h }) => (
+  <svg fill="none" viewBox="0 0 21 21" className={`w-${w} h-${h}`}>
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M20 6.278v8.444A5.278 5.278 0 0 1 14.722 20H6.278A5.278 5.278 0 0 1 1 14.722V6.278A5.278 5.278 0 0 1 6.278 1h8.444A5.278 5.278 0 0 1 20 6.278ZM5.222 15.778V8.389"
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M9.444 15.778v-3.43m0 0v-3.96m0 3.96c0-3.96 6.334-3.96 6.334 0v3.43M5.222 5.233l.01-.012"
     />
   </svg>
 )

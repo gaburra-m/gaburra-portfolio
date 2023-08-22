@@ -1,0 +1,48 @@
+---
+const { href, arrow, download, down } = Astro.props
+---
+
+<a
+  download={download}
+  href={href}
+  class="px-4 py-3 text-center text-white border-2 border-primary hover:text-backg-400 hover:bg-primary transition-colors duration-200 ease-in rounded flex items-center justify-center group"
+>
+  <slot />
+  {
+    arrow && (
+      <svg
+        class="w-3.5 h-3.5 ml-2 translate-x-0 group-hover:translate-x-2 duration-150 ease-in"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 5h12m0 0L9 1m4 4L9 9"
+        />
+      </svg>
+    )
+  }
+  {
+    down && (
+      <svg
+        class="w-5 ml-2 translate-x-0 animate-bounce  ease-in"
+        fill="none"
+        stroke-width="1.5"
+        color="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 13v9m0 0 3.5-3.5M12 22l-3.5-3.5m11.5-.893c1.494-.585 3-1.918 3-4.607 0-4-3.333-5-5-5 0-2 0-6-6-6S6 6 6 8c-1.667 0-5 1-5 5 0 2.689 1.506 4.022 3 4.607"
+        />
+      </svg>
+    )
+  }
+</a>
