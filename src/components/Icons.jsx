@@ -65,8 +65,27 @@ export const MenuIcon = () => (
   </svg>
 )
 
-export const GithubIcon = ({ w, h }) => (
-  <svg fill="none" viewBox="0 0 19 19" className={`w-${w} h-${h}`}>
+export const GithubIcon = () => (
+  <svg fill="none" viewBox="0 0 19 19" className={"w-4 h-4"}>
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M12.667 17.438v-2.272a2.668 2.668 0 0 0-.745-2.066c2.486-.277 5.099-1.22 5.099-5.542a4.306 4.306 0 0 0-1.188-2.969 4.014 4.014 0 0 0-.07-2.984s-.935-.278-3.096 1.171a10.593 10.593 0 0 0-5.542 0C4.964 1.327 4.03 1.605 4.03 1.605a4.014 4.014 0 0 0-.072 2.984 4.307 4.307 0 0 0-1.187 2.993c0 4.29 2.612 5.233 5.098 5.541a2.668 2.668 0 0 0-.744 2.043v2.272"
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      d="M7.125 15.854c-2.375.77-4.354 0-5.542-2.374"
+    />
+  </svg>
+)
+
+export const GithubIconHero = () => (
+  <svg fill="none" viewBox="0 0 19 19" className={"w-10 h-10"}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -150,8 +169,8 @@ export const BackIcon = () => (
   </svg>
 )
 
-export const LinkedIcon = ({ w, h }) => (
-  <svg fill="none" viewBox="0 0 21 21" className={`w-${w} h-${h}`}>
+export const LinkedIcon = () => (
+  <svg fill="none" viewBox="0 0 21 21" className="w-10 h-10">
     <path
       stroke="currentColor"
       strokeLinecap="round"
