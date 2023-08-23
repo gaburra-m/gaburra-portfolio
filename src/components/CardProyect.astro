@@ -6,14 +6,15 @@ import PillsTech from "./PillsTech.astro"
 ---
 
 <article
-  class="flex flex-col w-full rounded-md overflow-hidden bg-backg-400 shadow-lg border-2 border-backg-100 hover:border-primary hover:shadow-sm ease-in transition-colors hover:border-2"
+  class="flex flex-col w-full rounded-xl overflow-hidden bg-backg-400 shadow-lg border-2 border-backg-100 hover:border-primary hover:shadow-sm ease-in transition-colors hover:border-2 group"
 >
-  <figure>
+  <figure class="overflow-hidden bg-primary">
     <a href={proyecto.url}>
       <img
         src={proyecto.frontmatter.image}
         alt={`Imagen del proyecto de ${proyecto.frontmatter.title}`}
         loading="lazy"
+        class="group-hover:scale-[1.13] transform-gpu transition-transform"
       />
     </a>
   </figure>
@@ -30,14 +31,14 @@ import PillsTech from "./PillsTech.astro"
       proyecto.frontmatter.github !== "Sin Github" ? (
         <Links href={proyecto.frontmatter.github} target>
           <span slot="icon">
-            <GithubIcon w="4" h="4" />
+            <GithubIcon />
           </span>
           Github
         </Links>
       ) : (
         <Links href="#" target disabled>
           <span slot="icon">
-            <GithubIcon w="4" h="4" />
+            <GithubIcon />
           </span>
           Github
         </Links>
