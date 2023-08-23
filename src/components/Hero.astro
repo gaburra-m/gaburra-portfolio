@@ -11,23 +11,23 @@ import { GithubIconHero, LinkedIcon } from "./Icons"
       <span class="font-bold text-primary">Front-End</span> Developer
     </p>
     <div class="flex gap-4 mt-6 mb-12">
-      <IconTooltip href="https://github.com/gaburra-m" tooltip="Github">
+      <IconTooltip
+        href="https://github.com/gaburra-m"
+        tooltip="Github"
+        label="Visita mi perfil en Github"
+      >
         <GithubIconHero />
       </IconTooltip>
 
       <IconTooltip
         href="https://www.linkedin.com/in/gaburra-m"
         tooltip="LinkedIn"
+        label="Visita mi perfil en LinkedIn"
       >
         <LinkedIcon />
       </IconTooltip>
     </div>
-    <Button
-      down
-      href="/CV-Gabriel.pdf"
-      download="Gabriel Morales CV"
-      class="px-4 py-3 text-center text-white border-2 border-primary hover:text-black hover:bg-primary hover:text-backg-400 transition-colors duration-150 ease-in rounded flex items-center justify-center group"
-    >
+    <Button down href="/CV-Gabriel.pdf" download="Gabriel Morales CV">
       Descarga mi CV
     </Button>
   </div>

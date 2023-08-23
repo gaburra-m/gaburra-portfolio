@@ -1,5 +1,5 @@
 ---
-const { href, tooltip } = Astro.props
+const { href, tooltip, label } = Astro.props
 ---
 
 <div class="group flex relative">
@@ -7,6 +7,7 @@ const { href, tooltip } = Astro.props
     href={href}
     target="_blank"
     class="text-white hover:text-primary transition-colors"
+    aria-label={label}
   >
     <slot />
   </a>

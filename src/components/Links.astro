@@ -6,7 +6,7 @@ const { href, target, disabled } = Astro.props
   href={href}
   target={target ? "_blank" : "_self"}
   no-referrer
-  class=`flex gap-1 items-center justify-center py-2 px-2 md:px-3  border-b-2   transition  ${disabled ? "border-backg-100 text-backg-100 cursor-not-allowed pointer-events-none" : "border-b-primary  hover:text-primary"}`
+  class=`flex gap-1 items-center justify-center py-2 px-2 md:px-3  border-b-2   transition  ${disabled ? "border-secondary text-white line-through cursor-not-allowed pointer-events-none" : "border-b-primary  hover:text-primary"}`
 >
   <slot name="icon" />
   <slot />
