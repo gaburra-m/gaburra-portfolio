@@ -1,0 +1,59 @@
+---
+const skills = [
+  {
+    tech: "HTML",
+    icon: "/skills/html.svg",
+  },
+  {
+    tech: "CSS",
+    icon: "/skills/css.svg",
+  },
+  {
+    tech: "JavaScript",
+    icon: "/skills/js.svg",
+  },
+  {
+    tech: "React",
+    icon: "/skills/react.svg",
+  },
+  {
+    tech: "Github",
+    icon: "/skills/github.svg",
+  },
+  {
+    tech: "NextJS",
+    icon: "/skills/nextjs.svg",
+  },
+  {
+    tech: "Tailwind",
+    icon: "/skills/tailwindcss.svg",
+  },
+  {
+    tech: "Astro",
+    icon: "/skills/astro.svg",
+  },
+  {
+    tech: "Wordpress",
+    icon: "/skills/wp.svg",
+  },
+  {
+    tech: "Figma",
+    icon: "/skills/figma.svg",
+  },
+]
+---
+
+<ul class="grid justify-center gap-8 grid-cols-skills">
+  {
+    skills.map((skill) => (
+      <li class="flex flex-col justify-between items-center border-2 border-backg-100 gap-4 p-5 rounded-md bg-backg-400 text-white hover:border-primary transition-colors">
+        <img
+          src={skill.icon}
+          alt={`logo de ${skill.tech}`}
+          class="max-w-[50px]"
+        />
+        <p>{skill.tech}</p>
+      </li>
+    ))
+  }
+</ul>

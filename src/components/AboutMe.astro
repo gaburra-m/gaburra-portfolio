@@ -1,0 +1,22 @@
+---
+import Skills from "./Skills.astro"
+import Titulos from "./Titulos.astro"
+---
+
+<section id="sobre-mi">
+  <Titulos>Sobre mí</Titulos>
+  <article class="flex flex-col gap-4">
+    <p class="max-w-prose">
+      <span class="text-primary font-semibold text-2xl">+3</span> años de experiencia
+      en Wordpress con diseño a medida mediante builder como Elementor.
+    </p>
+    <p class="max-w-prose">
+      Conocimiento en Figma con la cual crear interfaces modernas y enfocadas al
+      usuario para lograr los objetivos de la plataforma.
+    </p>
+  </article>
+  <section class="flex flex-col gap-6 mt-16">
+    <h3 class="text-3xl uppercase text-primary font-bold">Skills</h3>
+    <Skills />
+  </section>
+</section>

@@ -12,7 +12,7 @@ const { href, tooltip, label } = Astro.props
     <slot />
   </a>
   <span
-    class="group-hover:opacity-100 transition-opacity bg-primary px-1 text-sm text-backg-400 rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-6 mx-auto"
+    class="group-hover:opacity-100 transition-opacity bg-primary px-1 text-sm text-backg-400 rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-6 mx-auto pointer-events-none"
     >{tooltip}</span
   >
 </div>

@@ -12,6 +12,10 @@ function Nav() {
       title: "Proyectos",
       link: "/proyectos",
     },
+    {
+      title: "Sobre mí",
+      link: "/#sobre-mi",
+    },
   ]
 
   const [toggle, setToggle] = useState(false)
