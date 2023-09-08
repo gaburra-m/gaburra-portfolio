@@ -39,8 +39,11 @@ const { frontmatter } = Astro.props
       <section>
         <Titulos>{frontmatter.title}</Titulos>
       </section>
-      <figure>
-        <img src={frontmatter.image} alt="" />
+      <figure class="rounded-xl overflow-hidden">
+        <img
+          src={frontmatter.image}
+          alt=`Imagen del proyecto ${frontmatter.title}`
+        />
       </figure>
       <section class="flex flex-col gap-6 py-8 px-4 mb-10">
         <div class="flex">
