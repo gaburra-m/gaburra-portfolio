@@ -15,6 +15,7 @@ import PillsTech from "./PillsTech.astro"
         alt={`Imagen del proyecto de ${proyecto.frontmatter.title}`}
         loading="lazy"
         class="group-hover:scale-[1.13] transform-gpu transition-transform"
+        transition:name={proyecto.frontmatter.title}
       />
     </a>
   </figure>

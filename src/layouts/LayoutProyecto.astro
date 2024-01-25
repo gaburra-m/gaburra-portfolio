@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Titulos from "../components/Titulos.astro"
@@ -12,7 +13,7 @@ const { frontmatter } = Astro.props
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+  <>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -31,6 +32,7 @@ const { frontmatter } = Astro.props
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>Gabriel Morales - {frontmatter.title}</title>
+    <ViewTransitions/>
   </head>
   <body class="bg-backg-200 text-white mx-auto">
     <Header />
@@ -43,6 +45,7 @@ const { frontmatter } = Astro.props
         <img
           src={frontmatter.image}
           alt=`Imagen del proyecto ${frontmatter.title}`
+          transition:name={frontmatter.title}
         />
       </figure>
       <section class="flex flex-col gap-6 py-8 px-4 mb-10">
