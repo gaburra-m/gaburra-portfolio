@@ -49,27 +49,6 @@ const { frontmatter } = Astro.props
         />
       </figure>
       <section class="flex flex-col gap-6 py-8 px-4 mb-10">
-        <!-- <div class="flex">
-          {
-            frontmatter.status ? (
-              <p class="bg-[#b9ffeb] border-2 border-[#00E18D] py-1 px-4 rounded-full flex items-center gap-2 text-backg-400 font-semibold">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00E18D] opacity-75" />
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00E18D]" />
-                </span>
-                Completado
-              </p>
-            ) : (
-              <p class="bg-[#ffcdd3] border-2 border-primary py-1 px-4 rounded-full flex items-center gap-2 text-backg-400 font-semibold">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-primary" />
-                </span>
-                En proceso
-              </p>
-            )
-          }
-        </div> -->
         <div class="flex flex-col gap-2">
           <p>Tecnologías</p>
           <div class="flex flex-wrap gap-2">
@@ -104,3 +83,12 @@ const { frontmatter } = Astro.props
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  .astro-code{
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+</style>
